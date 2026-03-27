@@ -3,6 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+  /* Parche de alta compatibilidad para tu foto */
+  img[alt*="Guillermo"] {
+    display: block;
+    content: url("assets/foto-profesional-BH7Q9p9S.png") !important;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Si el navegador no soporta 'content' en <img>, usamos este respaldo */
+  img[alt*="Guillermo"]::after {
+    content: "";
+    display: block;
+    background-image: url("assets/foto-profesional-BH7Q9p9S.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+</style>
     <!-- TODO: Set the document title to the name of your application -->
     <title>Vórtice Lab — Estrategia Inteligente</title>
     <meta name="description" content="Ayudamos a empresas a crecer mediante un modelo inteligente de desarrollo de marca.">
