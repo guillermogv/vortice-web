@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-  /* Parche de alta compatibilidad para tu foto */
+   <style>
+  /* Parche definitivo con ruta relativa corregida */
   img[alt*="Guillermo"] {
-    display: block;
-    content: url("assets/foto-profesional-BH7Q9p9S.png") !important;
-    width: 100%;
-    height: auto;
+    content: url("./assets/foto-profesional-BH7Q9p9S.png") !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
   }
 
-  /* Si el navegador no soporta 'content' en <img>, usamos este respaldo */
+  /* Respaldo por si el navegador bloquea 'content' */
   img[alt*="Guillermo"]::after {
-    content: "";
-    display: block;
-    background-image: url("assets/foto-profesional-BH7Q9p9S.png");
+    content: "" !important;
+    display: block !important;
+    background-image: url("./assets/foto-profesional-BH7Q9p9S.png") !important;
     background-size: cover;
     width: 100%;
     height: 100%;
